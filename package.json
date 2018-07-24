@@ -1,0 +1,21 @@
+{
+  "name": "chat-socket-node",
+  "version": "0.0.1",
+  "description": "first test app",
+  "main": "app.js",
+  "repository": "https://github.com/JofestGren/Chat-socket-node.git",
+  "author": "Jofest Gren",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --watch app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.1.1",
+    "mongoose": "^5.2.5",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
