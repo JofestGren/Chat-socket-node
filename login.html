@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat</title>
+    <link rel="stylesheet" href="public/stylesheets/login.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./public/javascripts/login.js"></script>
+</head>
+<body>
+    <main class="login-logup">
+        <div class="choose-log">
+            <span>Select actions</span>
+            <div class="choose-log-btn">
+                <button>Log in</button>
+                <button>Log up</button>
+            </div>
+        </div>
+        <form class="login-form" id="logInForm">
+            <label for="userName">Enter your username</label>
+            <input type="text" id="userName" name="userName">
+            <label for="userPassword">Enter your password</label>
+            <input type="password" id="userPassword" name="userPassword">
+            <button class="login-form__btn" id="logInBtn">Log in</button>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "ComfortaaRegular";
+    src: url("../fonts/Comfortaa-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ComfortaaLight";
+    src: url("../fonts/Comfortaa-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "ComfortaaBold";
+    src: url("../fonts/Comfortaa-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    background-color: #1C4D5C;
+    position: relative;
+}
+
+.login-logup {
+    max-width: 1366px;
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.choose-log {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.login-form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #6A8D98;
+    border-radius: 20px;
+    color: #184B5A;
+    font-family: 'ComfortaaBold', sans-serif;
+    font-size: 18px;
+}
+
+.login-form label {
+    margin-bottom: 10px;
+}
+
+.login-form span {
+    color: #BE465C;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    padding: 0 10px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'ComfortaaRegular', sans-serif;
+    font-size: 16px;
+    outline: none;
+    background-color: #2A7887;
+    color: #FBFBF9;
+}
+
+.login-form input:last-child {
+    margin-bottom: 25px;
+}
+
+.login-form__btn {
+    padding: 0 30px;
+    height: 40px;
+    color: #FFFFF4;
+    border: none;
+    border-radius: 5px;
+    background-color: #BE465C;
+    font-family: 'ComfortaaRegular', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all linear .5s;
+    outline: none;
+}
+
+.login-form__btn:hover {
+    background-color: #ae3d52;
+    box-shadow: 0 10px 15px rgba(144, 50, 68, 0.5);;
+}
