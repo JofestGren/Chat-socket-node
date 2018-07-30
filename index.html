@@ -5,36 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Chat</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font: 13px Helvetica, Arial; }
-        form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-        form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-        form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-        #messages { list-style-type: none; margin: 0; padding: 0; }
-        #messages li { padding: 5px 10px; color: #FFFFFF; background: #B1EEF3; }
-        #messages li:nth-child(odd) { background: #001C20; }
-    </style>
+    <link rel="stylesheet" href="public/stylesheets/index.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="public/javascripts/index.js"></script>
 </head>
 <body>
-    <ul id="messages"></ul>
-    <form action="">
-        <input type="text" id="m">
-        <button>Send</button>
-    </form>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        const socket = io()
-        const form = document.querySelector('form')
-        const inputVal = document.getElementById('m')
-        const messagesFiled = document.getElementById('messages')
-        form.addEventListener('submit', (event) => {
-            event.preventDefault()
-            socket.emit('chat message', inputVal.value)
-            inputVal.value = ''
-            return false
-        })
-        socket.on('chat message', (msg) => messagesFiled.insertAdjacentHTML('afterbegin', `<li>${msg}</li>`))
-    </script>
+    <main class="chat">
+        <div class="chat-nav">
+            <form class="chat-nav-form" action="">
+                <button>...</button>
+                <input type="text" id="searchChatNav" name="searchChatNav" placeholder="Search">
+            </form>
+            <ul></ul>
+            <div>
+                <button>Settins</button>
+            </div>
+        </div>
+        <div class="chat-main">
+            <div>
+                <div>
+                    <span>Name</span>
+                    <span>Last seen</span>
+                </div>
+                <div>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>I</button>
+                </div>
+            </div>
+            <ul id="messages"></ul>
+            <form action="">
+                <input type="text" id="m">
+                <button>Send</button>
+            </form>
+        </div>
+        <div class="chat-more">
+
+        </div>
+    </main>
 </body>
 </html>
